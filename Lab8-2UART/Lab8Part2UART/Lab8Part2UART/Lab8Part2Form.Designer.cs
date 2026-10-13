@@ -1,6 +1,6 @@
 ﻿namespace Lab8Part2UART
 {
-    partial class Form1
+    partial class Lab8Part2Form
     {
         /// <summary>
         ///  Required designer variable.
