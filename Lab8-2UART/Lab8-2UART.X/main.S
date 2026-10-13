@@ -1,7 +1,7 @@
     ; Abel Doyle
     ; RCET3375
     ; Lab8-2UART
-    ; https://github.com/abeldoyl/Lab-08-UART/tree/main/Lab8-2UART.X
+    ; https://github.com/abeldoyl/Lab-08-UART/tree/main/Lab8-2UART/Lab8-2UART.X
 
 ; PIC16F883 Configuration Bit Settings
  
