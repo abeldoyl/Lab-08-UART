@@ -20,3 +20,8 @@ disassembly/
 *.elf
 *.hex
 *.map
+
+.vs/
+bin/
+obj/
+*.user
