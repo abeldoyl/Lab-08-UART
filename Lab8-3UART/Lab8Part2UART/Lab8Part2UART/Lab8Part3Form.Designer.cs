@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             ExitButton = new Button();
             ConnectButton = new Button();
             ReadButton = new Button();
@@ -40,6 +41,7 @@
             FramingErrorButton = new Button();
             ADCButton = new Button();
             IDButton = new Button();
+            StatusTimer = new System.Windows.Forms.Timer(components);
             StatusStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -131,6 +133,7 @@
             FramingErrorButton.TabIndex = 8;
             FramingErrorButton.Text = "Framing Error";
             FramingErrorButton.UseVisualStyleBackColor = true;
+            FramingErrorButton.Click += FramingErrorButton_Click;
             // 
             // ADCButton
             // 
@@ -140,6 +143,7 @@
             ADCButton.TabIndex = 9;
             ADCButton.Text = "ADC";
             ADCButton.UseVisualStyleBackColor = true;
+            ADCButton.Click += ADCButton_Click;
             // 
             // IDButton
             // 
@@ -149,6 +153,7 @@
             IDButton.TabIndex = 10;
             IDButton.Text = "ID";
             IDButton.UseVisualStyleBackColor = true;
+            IDButton.Click += IDButton_Click;
             // 
             // Lab8Part3Form
             // 
@@ -188,5 +193,6 @@
         private Button FramingErrorButton;
         private Button ADCButton;
         private Button IDButton;
+        private System.Windows.Forms.Timer StatusTimer;
     }
 }
