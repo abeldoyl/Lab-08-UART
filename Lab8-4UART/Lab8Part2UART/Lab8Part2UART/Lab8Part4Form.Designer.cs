@@ -1,6 +1,6 @@
 ﻿namespace Lab8Part3UART
 {
-    partial class Lab8Part3Form
+    partial class Lab8Part4Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,19 +30,18 @@
         {
             components = new System.ComponentModel.Container();
             ExitButton = new Button();
-            ConnectButton = new Button();
-            ReadButton = new Button();
             WriteButton = new Button();
             ComListBox = new ListBox();
             PortsComboBox = new ComboBox();
             StatusStrip = new StatusStrip();
             StatusLabel = new ToolStripStatusLabel();
             OutputTextBox = new TextBox();
-            FramingErrorButton = new Button();
-            ADCButton = new Button();
-            IDButton = new Button();
             StatusTimer = new System.Windows.Forms.Timer(components);
+            ServoTrackBar = new TrackBar();
+            AngleLabel = new Label();
+            TempLabel = new Label();
             StatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ServoTrackBar).BeginInit();
             SuspendLayout();
             // 
             // ExitButton
@@ -55,29 +54,9 @@
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
             // 
-            // ConnectButton
-            // 
-            ConnectButton.Location = new Point(578, 379);
-            ConnectButton.Name = "ConnectButton";
-            ConnectButton.Size = new Size(102, 49);
-            ConnectButton.TabIndex = 1;
-            ConnectButton.Text = "&Connect";
-            ConnectButton.UseVisualStyleBackColor = true;
-            ConnectButton.Click += ConnectButton_Click;
-            // 
-            // ReadButton
-            // 
-            ReadButton.Location = new Point(470, 379);
-            ReadButton.Name = "ReadButton";
-            ReadButton.Size = new Size(102, 49);
-            ReadButton.TabIndex = 2;
-            ReadButton.Text = "&Read";
-            ReadButton.UseVisualStyleBackColor = true;
-            ReadButton.Click += ReadButton_Click;
-            // 
             // WriteButton
             // 
-            WriteButton.Location = new Point(362, 379);
+            WriteButton.Location = new Point(590, 380);
             WriteButton.Name = "WriteButton";
             WriteButton.Size = new Size(102, 49);
             WriteButton.TabIndex = 3;
@@ -125,56 +104,57 @@
             OutputTextBox.Size = new Size(149, 27);
             OutputTextBox.TabIndex = 7;
             // 
-            // FramingErrorButton
+            // ServoTrackBar
             // 
-            FramingErrorButton.Location = new Point(116, 154);
-            FramingErrorButton.Name = "FramingErrorButton";
-            FramingErrorButton.Size = new Size(116, 43);
-            FramingErrorButton.TabIndex = 8;
-            FramingErrorButton.Text = "Framing Error";
-            FramingErrorButton.UseVisualStyleBackColor = true;
-            FramingErrorButton.Click += FramingErrorButton_Click;
+            ServoTrackBar.BackColor = SystemColors.ControlDarkDark;
+            ServoTrackBar.Location = new Point(12, 372);
+            ServoTrackBar.Maximum = 180;
+            ServoTrackBar.Minimum = 1;
+            ServoTrackBar.Name = "ServoTrackBar";
+            ServoTrackBar.Size = new Size(272, 56);
+            ServoTrackBar.TabIndex = 11;
+            ServoTrackBar.TickFrequency = 10;
+            ServoTrackBar.TickStyle = TickStyle.Both;
+            ServoTrackBar.Value = 90;
+            ServoTrackBar.ValueChanged += ServoTrackBar_ValueChanged;
             // 
-            // ADCButton
+            // AngleLabel
             // 
-            ADCButton.Location = new Point(116, 203);
-            ADCButton.Name = "ADCButton";
-            ADCButton.Size = new Size(116, 43);
-            ADCButton.TabIndex = 9;
-            ADCButton.Text = "ADC";
-            ADCButton.UseVisualStyleBackColor = true;
-            ADCButton.Click += ADCButton_Click;
+            AngleLabel.AutoSize = true;
+            AngleLabel.Location = new Point(116, 349);
+            AngleLabel.Name = "AngleLabel";
+            AngleLabel.Size = new Size(50, 20);
+            AngleLabel.TabIndex = 12;
+            AngleLabel.Text = "label1";
             // 
-            // IDButton
+            // TempLabel
             // 
-            IDButton.Location = new Point(116, 252);
-            IDButton.Name = "IDButton";
-            IDButton.Size = new Size(116, 43);
-            IDButton.TabIndex = 10;
-            IDButton.Text = "ID";
-            IDButton.UseVisualStyleBackColor = true;
-            IDButton.Click += IDButton_Click;
+            TempLabel.AutoSize = true;
+            TempLabel.Location = new Point(116, 320);
+            TempLabel.Name = "TempLabel";
+            TempLabel.Size = new Size(50, 20);
+            TempLabel.TabIndex = 13;
+            TempLabel.Text = "label1";
             // 
-            // Lab8Part3Form
+            // Lab8Part4Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 458);
-            Controls.Add(IDButton);
-            Controls.Add(ADCButton);
-            Controls.Add(FramingErrorButton);
+            Controls.Add(TempLabel);
+            Controls.Add(AngleLabel);
+            Controls.Add(ServoTrackBar);
             Controls.Add(OutputTextBox);
             Controls.Add(StatusStrip);
             Controls.Add(PortsComboBox);
             Controls.Add(ComListBox);
             Controls.Add(WriteButton);
-            Controls.Add(ReadButton);
-            Controls.Add(ConnectButton);
             Controls.Add(ExitButton);
-            Name = "Lab8Part3Form";
-            Text = "Lab 8 Part 3 Form";
+            Name = "Lab8Part4Form";
+            Text = "Lab 8 Part 4 Form";
             StatusStrip.ResumeLayout(false);
             StatusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ServoTrackBar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,17 +162,15 @@
         #endregion
 
         private Button ExitButton;
-        private Button ConnectButton;
-        private Button ReadButton;
         private Button WriteButton;
         private ListBox ComListBox;
         private ComboBox PortsComboBox;
         private StatusStrip StatusStrip;
         private ToolStripStatusLabel StatusLabel;
         private TextBox OutputTextBox;
-        private Button FramingErrorButton;
-        private Button ADCButton;
-        private Button IDButton;
         private System.Windows.Forms.Timer StatusTimer;
+        private TrackBar ServoTrackBar;
+        private Label AngleLabel;
+        private Label TempLabel;
     }
 }

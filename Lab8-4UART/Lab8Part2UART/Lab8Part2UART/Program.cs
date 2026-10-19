@@ -11,7 +11,7 @@ namespace Lab8Part3UART
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Lab8Part3Form());
+            Application.Run(new Lab8Part4Form());
         }
     }
 }
