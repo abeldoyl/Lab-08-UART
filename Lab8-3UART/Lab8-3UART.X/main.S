@@ -173,7 +173,7 @@ Main:
     CALL ServiceRx
     CALL ServiceReply
     CALL ServiceTx
-    ; CALL TestDelay            ; overrun test only: uncomment to block RX service
+    CALL TestDelay            ; overrun test only: uncomment to block RX service
     GOTO Main
  
 ; ----------------------------------------------------------------------
